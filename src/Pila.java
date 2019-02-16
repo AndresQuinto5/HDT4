@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pila<E> implements iPila<E>{
+public abstract class Pila<E> implements iPila<E>{
 
     protected List<E> ar;
 

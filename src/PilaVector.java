@@ -1,2 +1,2 @@
-public class PilaVector {
+public class PilaVector<E> extends Pila<E> {
 }
