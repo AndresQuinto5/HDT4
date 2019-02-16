@@ -1,4 +1,5 @@
-public class Lista {
+public abstract class Lista<E> implements iLista<E> {
+    
 
 
 }

@@ -1,25 +1,26 @@
 import java.util.ArrayList;
+import java.util.List;
 
-public class Pila implements iPila<String>{
+public class Pila<E> implements iPila<E>{
 
-    public boolean tienealgo = true;
-    ArrayList<String> ar = new ArrayList<>();
+    protected List<E> ar;
+
+
 
     @Override
-    public void push(String item) {
+    public void push(E item) {
         ar.add(item);
-        tienealgo = false;
     }
 
     //quitar
     @Override
-    public String pop() {
+    public E pop() {
         return ar.remove(size()-1);
 
     }
 
     @Override
-    public String peek() {
+    public E peek() {
         return ar.get(ar.size()-1);
     }
 

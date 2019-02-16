@@ -1,7 +1,6 @@
 import java.util.Iterator;
 
-public interface iLista<E>
-{
+public interface iLista<E> {
     public int size();
     // post: returns number of elements in list
     public boolean isEmpty();
