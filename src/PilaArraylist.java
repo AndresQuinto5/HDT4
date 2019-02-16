@@ -2,7 +2,7 @@ import java.util.ArrayList; //Implementacion del ArraylistEnlaPila
 
 public class PilaArraylist<E> extends Pila<E>
 {
-    ArrayList<E> list;
+    protected ArrayList<E> list;
 
     @Override
     public void push(E element)

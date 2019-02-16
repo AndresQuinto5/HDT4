@@ -55,7 +55,7 @@ public class Main {
                 for (int i=0, n=informacion.length(); i < n; i++){
                     switch (Character.toString(informacion.charAt(i))){
                         case "+":{
-                            a = ((Pila) pila).pop();
+                            a = ((Pila)pila).pop();
                             result1 = Double.parseDouble(a);
                             b = ((Pila) pila).pop();
                             result2 = Double.parseDouble(b);

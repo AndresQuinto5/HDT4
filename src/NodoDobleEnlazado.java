@@ -1,12 +1,13 @@
 public class NodoDobleEnlazado<E>
 {
+
     protected NodoDobleEnlazado<E> previous;
     //Referencia nodo anterior
 
     protected NodoDobleEnlazado<E> next;
     // Referencia proximo nodo
 
-    protected E Value;
+    protected E value;
     //Valor a almacenar
 
     public NodoDobleEnlazado(NodoDobleEnlazado<E> previous, NodoDobleEnlazado<E> next, E Value)
@@ -15,7 +16,7 @@ public class NodoDobleEnlazado<E>
 
         this.next = next;
 
-        this.Value = Value;
+        this.value = value;
     }
 
     public void setPrevious(NodoDobleEnlazado<E> previous) { this.previous = previous; }
@@ -26,8 +27,8 @@ public class NodoDobleEnlazado<E>
 
     public NodoDobleEnlazado<E> getNext() { return next; }
 
-    public void setValue(E Value) { this.Value = Value; }
+    public void setValue(E value) { this.value = value; }
 
-    public E getValue() { return Value; }
+    public E getValue() { return value; }
 
 }

@@ -1,4 +1,4 @@
-public class NodoCircular{
+public class NodoCircular<E>{
     // Variable en la cual se va a guardar el valor.
 
     public int value;
