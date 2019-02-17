@@ -1,14 +1,15 @@
-public class ListaCircular<E>  {
+public class ListaCircular<E>   {
 
     protected NodoCircular<E> tail;
     protected int count;
+
     public ListaCircular()
 // pre: constructs a new circular list
     {
         tail = null;
         count = 0;
     }
-    public void addFirst(E value)
+    public void add(E value)
 // pre: value non-null
 // post: adds element to head of list
     {
@@ -23,15 +24,8 @@ public class ListaCircular<E>  {
         }
         count++;
     }
-    public void addLast(E value)
-// pre: value non-null
-// post: adds element to tail of list
-    {
-// new entry:
-        addFirst(value);
-        tail = tail.getNext();
-    }
-    public int removeLast()
+
+    public E remove()
 // pre: !isEmpty()
 // post: returns and removes value from tail of list
     {
@@ -49,7 +43,10 @@ public class ListaCircular<E>  {
             tail = finger;
         }
         count--;
-        return temp.getValue();
+        return null;
+    }
+    public int size(){
+        return this.count;
     }
 }
 

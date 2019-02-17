@@ -32,7 +32,7 @@ public class ListaSimplementeEncadenada<E> {
         head = new NodoSimplementeEnlazado<E>(head, value);
         count++;
     }
-    public E removeFirst()
+    public E remove()
 // pre: list is not empty
 // post: removes and returns value from beginning of list
     {
@@ -101,39 +101,7 @@ public class ListaSimplementeEncadenada<E> {
         }
         return finger != null;
     }
-    public E remove(E value)
-// pre: value is not null
-// post: removes first element with matching value, if any
-    {
-        NodoSimplementeEnlazado<E> finger = head;
-        NodoSimplementeEnlazado<E> previous = null;
-        while (finger != null &&
-                !finger.value().equals(value))
-        {
-            previous = finger;
-            finger = finger.next();
-        }
-// finger points to target value
-        if (finger != null) {
-// we found element to remove
-            if (previous == null) // it is first
-            {
-                head = finger.next();
-            } else { // it's not first
-                previous.setNext(finger.next());
-            }
-            count--;
-            return finger.value();
-        }
-// didn't find it, return null
-        return null;
-    }
-    public void clear()
-// post: removes all elements from list
-    {
-        head = null;
-        count = 0;
-    }
+
     public void add(int i, E o)
 // pre: 0 <= i <= size()
 // post: adds ith entry of list to value o
@@ -160,28 +128,7 @@ public class ListaSimplementeEncadenada<E> {
             previous.setNext(current);
         }
     }
-    public E remove(int i)
-// pre: 0 <= i < size()
-// post: removes and returns object found at that location
-    {
 
-        if (i == 0) return removeFirst();
-        else if (i == size()-1) return removeLast();
-        NodoSimplementeEnlazado<E> previous = null;
-        NodoSimplementeEnlazado<E> finger = head;
-// search for value indexed, keep track of previous
-        while (i > 0)
-        {
-            previous = finger;
-            finger = finger.next();
-            i--;
-        }
-// in list, somewhere in middle
-        previous.setNext(finger.next());
-        count--;
-// finger's value is old value, return it
-        return finger.value();
-    }
 
 
 }

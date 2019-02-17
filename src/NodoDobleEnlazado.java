@@ -1,45 +1,47 @@
+
+
 public class NodoDobleEnlazado<E>
 {
-
-    protected NodoDobleEnlazado<E> previous;
-    //Referencia nodo anterior
-
-    protected NodoDobleEnlazado<E> next;
-    // Referencia proximo nodo
-
-    protected E value;
-    //Valor a almacenar
-
-    public NodoDobleEnlazado(NodoDobleEnlazado<E> previous, NodoDobleEnlazado<E> next, E Value)
+    protected E data;
+    protected NodoDobleEnlazado<E> nextElement;
+    protected NodoDobleEnlazado<E> previousElement;
+    public NodoDobleEnlazado(E v,
+                            NodoDobleEnlazado<E> next,
+                            NodoDobleEnlazado<E> previous)
     {
-        this.previous = previous;
-
-        this.next = next;
-
-        this.value = value;
+        data = v;
+        nextElement = next;
+        if (nextElement != null)
+            nextElement.previousElement = this;
+        previousElement = previous;
+        if (previousElement != null)
+            previousElement.nextElement = this;
+    }
+    public NodoDobleEnlazado(E v)
+// post: constructs a single element
+    {
+        this(v,null,null);
+    }
+    public NodoDobleEnlazado<E> next()
+// post: returns reference to next value in list
+    {
+        return nextElement;
+    }
+    public void setNext(NodoDobleEnlazado<E> next)
+// post: sets reference to new next value
+    {
+        nextElement = next;
+    }
+    public E value()
+// post: returns value associated with this element
+    {
+        return data;
+    }
+    public void setValue(E value)
+// post: sets value associated with this element
+    {
+        data = value;
     }
 
-    public void setPrevious(NodoDobleEnlazado<E> previous) { this.previous = previous; }
 
-    public NodoDobleEnlazado<E> getPrevious() { return previous; }
-
-    public void setNext(NodoDobleEnlazado<E> next) { this.next = next; }
-
-    public NodoDobleEnlazado<E> getNext() { return next; }
-
-    public void setValue(E value) { this.value = value; }
-
-    public E getValue() { return value; }
-
-    public E value() {
-        return this.value;
-    }
-
-    public <E extends NodoDobleEnlazado<E>> NodoDobleEnlazado<E> next() {
-        return (NodoDobleEnlazado<E>) this.next;
-    }
-
-    public NodoDobleEnlazado<E> previous() {
-        return this.previous;
-    }
 }

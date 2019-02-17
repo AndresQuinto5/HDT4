@@ -30,4 +30,7 @@ public class PilaVector<E> extends Pila<E> {
         return ar.isEmpty();
     }
 
+    public PilaVector() { ar = new Vector<>();
+    }
+
 }
