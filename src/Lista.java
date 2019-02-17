@@ -1,6 +1,6 @@
 import java.util.Iterator;
 
-public abstract class Lista<E> extends AbstractStructure<E> implements iLista<E>{
+public abstract class Lista<E> implements iLista<E>{
 
     public boolean isEmpty()
 // post: returns true iff list has no elements

@@ -1,5 +1,3 @@
-import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Node;
-
 public class ListaCircular<E>  {
 
     protected NodoCircular<E> tail;
@@ -15,7 +13,7 @@ public class ListaCircular<E>  {
 // post: adds element to head of list
     {
 
-        NodoCircular<E> temp = new NodoCircular(value);
+        NodoCircular<E> temp = new NodoCircular<E>(value);
         if (tail == null) { // first value added
             tail = temp;
             tail.setNext(tail);
@@ -33,7 +31,7 @@ public class ListaCircular<E>  {
         addFirst(value);
         tail = tail.getNext();
     }
-    public E removeLast()
+    public int removeLast()
 // pre: !isEmpty()
 // post: returns and removes value from tail of list
     {
@@ -51,7 +49,7 @@ public class ListaCircular<E>  {
             tail = finger;
         }
         count--;
-        return temp.value();
+        return temp.getValue();
     }
 }
 

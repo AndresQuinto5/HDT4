@@ -29,7 +29,7 @@ public class ListaSimplementeEncadenada<E> {
     {
 // note order that things happen:
 // head is parameter, then assigned
-        head = new NodoSimplementeEnlazado<E>(value, head);
+        head = new NodoSimplementeEnlazado<E>(head, value);
         count++;
     }
     public E removeFirst()
@@ -51,7 +51,7 @@ public class ListaSimplementeEncadenada<E> {
 // post: adds value to end of list
     {
 // location for new value
-        NodoSimplementeEnlazado<E> temp = new NodoSimplementeEnlazado<E>(value,null);
+        NodoSimplementeEnlazado<E> temp = new NodoSimplementeEnlazado<E>((NodoSimplementeEnlazado<E>) value,null);
         if (head != null)
         {
 // pointer to possible tail
@@ -154,7 +154,7 @@ public class ListaSimplementeEncadenada<E> {
             }
 // create new value to insert in correct position
             NodoSimplementeEnlazado<E> current =
-                    new NodoSimplementeEnlazado<E>(o,finger);
+                    new NodoSimplementeEnlazado<E>(finger, o);
             count++;
 // make previous value point to new value
             previous.setNext(current);
