@@ -1,6 +1,6 @@
 public class FactoryPila {
 
-    public iPila getImplementacion(String opc){
+    public iPila getImplementaciones(String opc){
 
         if("1".equals(opc)){
             System.out.print("Opcion PilaLista Elegida");
