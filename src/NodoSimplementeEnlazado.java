@@ -20,5 +20,13 @@ public class NodoSimplementeEnlazado<E>
     public void setNext(NodoSimplementeEnlazado<E> next) { this.next = next; }
 
     public E getValue() { return Value; }
+
+    public NodoSimplementeEnlazado<E> next() {
+        return this.next;
+    }
+
+    public E value() {
+        return this.Value;
+    }
 }
 

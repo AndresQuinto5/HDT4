@@ -31,4 +31,15 @@ public class NodoDobleEnlazado<E>
 
     public E getValue() { return value; }
 
+    public E value() {
+        return this.value;
+    }
+
+    public <E extends NodoDobleEnlazado<E>> NodoDobleEnlazado<E> next() {
+        return (NodoDobleEnlazado<E>) this.next;
+    }
+
+    public NodoDobleEnlazado<E> previous() {
+        return this.previous;
+    }
 }

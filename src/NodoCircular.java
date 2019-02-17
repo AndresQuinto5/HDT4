@@ -7,6 +7,10 @@ public class NodoCircular<E>{
 
     public NodoCircular Next;
 
+    public NodoCircular(Object value) {
+
+    }
+
     public void NodoCircular(){
         this.value = 0;
         this.Next = null;
@@ -29,4 +33,6 @@ public class NodoCircular<E>{
     public void setNext(NodoCircular Next) {
         this.Next = Next;
     }
+
+
 }
