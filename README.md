@@ -1,4 +1,4 @@
 # HDT4
-
-Kristen Brandt
-Andres Quinto
+ Programa: CALCULADORA para evaluar expresiones postfix. 
+-Kristen Brandt
+-Andres Quinto
